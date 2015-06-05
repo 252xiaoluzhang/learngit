@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>homeworks</title>
+<style type="text/css">
+#left{
+	width:45%;
+	border:1px solid red;
+	margin:0 auto;
+	float:left;
+	}
+#right{
+	widows:50%;
+	border:1px solid blue;
+	margin:0 auto;
+	float:right;
+	}
+</style>
+<script>
+	function showMessage(){
+    var wnd = window.open("信息验证");
+	wnd.document.write("以下为表单信息:"+ "<br>");
+	for (var i=0;i<document.baseInfo.elements.length;i++){
+	wnd.document.write(document.baseInfo.elements[i].name+":"+document.baseInfo.elements[i].value + "<br>");
+	}
+	
+	for (var i=0;i<document.otherInfo.elements.length-1;i++){
+	wnd.document.write(document.otherInfo.elements[i].name+":"+document.otherInfo.elements[i].value + "<br>");
+	}
+	}
+</script>
+</head>
+
+<body>
+<div id="left">
+
+<h2>请输入您的基本信息（必须填写）</h2>
+<form name="baseInfo">
+您的姓名：
+<input type="text" name="user" />
+<br />
+您的性别：
+<input type="radio" name="sex" value="男" />男
+<input type="radio" name="sex" value="女" />女
+<br />
+您的年龄：
+<input type="text" name="age" />
+<br />
+工作单位：
+<input type="text" name="job" />
+<br />
+联系方式：
+<input type="text" name="tel" />
+<br />
+</form>
+<h2>请输入您的其他信息</h2>
+<form name="otherInfo">
+您向往的职业：
+<select name="pro">
+<option value="工程师">工程师</option>
+<option value="教师">教师</option>
+<option value="程序员">程序员</option>
+</select>
+您喜欢的运动：
+<input type="checkbox" name="like" value="足球"/>足球
+<input type="checkbox" name="like" value="篮球"/>篮球
+<input type="checkbox" name="like" value="乒乓球" />乒乓球
+<input type="checkbox" name="like" value="羽毛球" />羽毛球
+<input type="checkbox" name="like" value="棒球" />棒球
+<br />
+请给我们留言：
+<textarea name="message" rows="6" cols="35"></textarea>
+<br  />
+单击该按钮显示表单信息：
+<input type="button" name="ok" value="确定" onclick="showMessage()" />
+</form>
+</div>
+
+</body>
+</html>
