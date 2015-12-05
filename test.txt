@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1th
 2th
 3th
@@ -5,3 +6,6 @@
 5th
 6th
 7th
+=======
+1th
+>>>>>>> refs/remotes/origin/bug
