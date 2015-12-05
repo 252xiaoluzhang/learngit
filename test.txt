@@ -1,2 +1,10 @@
+<<<<<<< HEAD
 qw
 新建一行
+<<<<<<< HEAD
+=======
+>>>>>>> parent of f84ce96... as
+=======
+hello world
+nihao
+>>>>>>> parent of 1840821... Revert "hello"
